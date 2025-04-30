@@ -12,4 +12,4 @@ spec:
   lifecycle: production
   owner: equipe-exemplo
   definition:
-    $text: https://pokeapi.co/docs/v2  # Este é o link da documentação
+    $text: https://raw.githubusercontent.com/sua-org/pokeapi-docs/main/pokeapi-openapi.yaml
