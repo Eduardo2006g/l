@@ -1,0 +1,39 @@
+openapi: 3.0.0
+info:
+  title: PokeAPI
+  version: 1.0.0
+  description: API pública que fornece informações sobre Pokémon.
+servers:
+  - url: https://pokeapi.co/api/v2
+paths:
+  /pokemon:
+    get:
+      summary: Lista todos os Pokémon disponíveis.
+      parameters:
+        - name: limit
+          in: query
+          required: false
+          schema:
+            type: integer
+        - name: offset
+          in: query
+          required: false
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: Lista de Pokémon.
+  /pokemon/{name}:
+    get:
+      summary: Retorna detalhes de um Pokémon específico pelo nome ou ID.
+      parameters:
+        - name: name
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Detalhes do Pokémon.
+        '404':
+          description: Pokémon não encontrado.
