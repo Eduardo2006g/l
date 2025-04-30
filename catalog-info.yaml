@@ -1,0 +1,15 @@
+apiVersion: backstage.io/v1alpha1
+kind: API
+metadata:
+  name: pokeapi
+  description: API pública que fornece informações sobre Pokémon.
+  tags:
+    - rest
+    - public
+    - pokemon
+spec:
+  type: openapi
+  lifecycle: production
+  owner: equipe-exemplo
+  definition:
+    $text: https://pokeapi.co/docs/v2  # Este é o link da documentação
